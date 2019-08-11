@@ -103,12 +103,93 @@ function concertThis( searchTerm ) {
 
 ///////////////////////////////////////////////////
 function spotifyThis(searchTerm) {
-    console.log (`spotifyThis: ${searchTerm}`);
+   
+    //console.log (`spotifyThis: ${searchTerm}`);
+
+    if ( !searchTerm ) {
+        searchTerm = "The Sign Ace Of Base";
+    }
+  
+    spotify.search({ type: 'track', query: searchTerm, limit: 1 }, function(err, data) {
+    if (err) {
+        return console.log('Error occurred: ' + err);
+    }
+
+   //console.log(JSON.stringify(data, null, 2));  
+   
+    
+   if (data.tracks.items.length === 0) {
+       console.log ("Sorry, I could not find that song."); 
+   }
+   else {
+    console.log( `${data.tracks.items.length} track(s) found.`);
+    console.log('-----------------------------------------------------------');
+    console.log( `Artist Name: ${data.tracks.items[0].album.artists[0].name}`);
+    console.log( `Song Name  : ${data.tracks.items[0].name}`);
+    console.log( `Preview URL: ${data.tracks.items[0].preview_url}`);
+    console.log( `Album  Name: ${data.tracks.items[0].album.name}`);
+    console.log('-----------------------------------------------------------');
+   }
+
+    });
 }
 
 ///////////////////////////////////////////////////
 function movieThis(searchTerm) {
-    console.log (`movie-this: ${searchTerm}`);
+    
+    
+
+      //Update the search term to a default value if empty.
+      if ( !searchTerm ) {
+         searchTerm = "Mr. Nobody";
+      }
+
+      //console.log (`movie-this: ${searchTerm}`);
+
+      // Here we construct our URL
+      var queryURL = "https://www.omdbapi.com/?t=" + searchTerm + "&apikey=trilogy";
+
+      axios.get( queryURL ).then ( 
+          
+        function(response) { 
+            //console.log(response.data);
+
+            if (response.data.Response !== "False") {
+                console.log('-----------------------------------------------------------');
+                console.log( `Movie Title: ${response.data.Title}`);
+                console.log( `Year       : ${response.data.Year}`);
+                console.log( `Rating     : ${response.data.Rated}`);
+
+                response.data.Ratings.forEach ( function (ratingObject, index) {
+                if (ratingObject.Source === "Rotten Tomatoes") {
+                    console.log( `Rotten Tomatoes Rating: ${ratingObject.Value}` );
+                }
+                });
+
+                console.log( `Plot       : ${response.data.Country}`);
+                console.log( `Language   : ${response.data.Language}`);
+                console.log( `Plot       : ${response.data.Plot}`);
+                console.log( `Actors     : ${response.data.Actors}`);
+
+                console.log('-----------------------------------------------------------');
+            }
+            else {
+                console.log(`${response.data.Error}`);
+            }
+          }
+      ).catch (function (error) {
+        console.log(`HTTP call was initiated, but an error occurred. \nThe error is ${error}`) ;  
+        if(error.response) {
+            // The request was made and the server responded with a status code
+            // that calls out of the range of 2xx
+            console.log("---------------Data-----------------");
+            console.log(error.response.data); 
+            console.log("---------------Status---------------");
+            console.log(error.response.status);
+            console.log("---------------Status---------------");
+            console.log(error.response.headers);
+        }
+    });
 }
 
 ///////////////////////////////////////////////////
