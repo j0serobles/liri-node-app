@@ -15,6 +15,8 @@ var axios = require("axios");
 //Import the Noments package
 var moment = require ("moment"); 
 
+fs = require('fs'); 
+
 // Allowed Commands:
 //
 // concert-this
@@ -26,18 +28,25 @@ var moment = require ("moment");
 // do-what-it-says
 
 var commandToExecute = process.argv[2];
+var commandArguments = process.argv[3];
+processCommand (commandToExecute, commandArguments); 
 
-switch (commandToExecute) { 
+
+///////////////////////////////////////////////////////////////////////////////
+function processCommand( commandToExecute, commandArguments)  {
+
+  switch (commandToExecute) { 
+
     case 'concert-this' : {
-        concertThis(process.argv[3]);
+        concertThis(commandArguments);
     }
     break;
     case 'spotify-this-song' : {
-        spotifyThis(process.argv[3]); 
+        spotifyThis(commandArguments); 
     }
     break;
     case 'movie-this' : {
-        movieThis(process.argv[3]); 
+        movieThis(commandArguments); 
     }
     break;
     case 'do-what-it-says' : {
@@ -47,6 +56,8 @@ switch (commandToExecute) {
     default : {
         console.log (`Sorry, I don't recognize this command : ${commandToExecute}`);
     }
+
+  }
 }
 
 
@@ -194,5 +205,34 @@ function movieThis(searchTerm) {
 
 ///////////////////////////////////////////////////
 function doWhatItSays(searchTerm) {
+    
     console.log (`doWhatItSays`);
+
+    //Open the file with the commands to execute.
+    fs.readFile("random.txt", "utf8", function(error, data) {
+
+    // If the code experiences any errors it will log the error to the console.
+    if (error) {
+        return console.log(error);
+    }
+    
+    // We will then print the contents of data
+    console.log(data);
+    
+    // Then split it by line (to allow processing of multiple commands).
+    var dataArr = data.split("\n");
+    
+    // We will then re-display the content as an array for later use.
+    console.log(dataArr);
+
+    dataArr.forEach( function (line) {
+
+      if (line.length > 0) {
+        var commandLine      = line.split(",");
+        var commandToExec    = commandLine[0];
+        var commandArguments = commandLine[1];
+        processCommand(commandToExec, commandArguments); 
+      }
+    });
+  });
 }
