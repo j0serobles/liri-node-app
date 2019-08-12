@@ -6,7 +6,7 @@ var Spotify = require("node-spotify-api");
 
 //Import the keys used by node-spotify-api
 var keys    = require("./keys.js");
-//console.log (keys.spotify); 
+//console_log (keys.spotify); 
 var spotify = new Spotify(keys.spotify);
 
 //Import the axios package
@@ -29,9 +29,14 @@ fs = require('fs');
 
 var commandToExecute = process.argv[2];
 var commandArguments = process.argv[3];
-processCommand (commandToExecute, commandArguments); 
+processCommand (commandToExecute, commandArguments);
 
 
+//////////////////////////////////////////////////////
+function printUsage () {
+    console.log ("USAGE : \nnode liri.js <command> [<argument>]\nWhere <command> is one of:\n" + 
+                  "concert-this\nspotify-this-song\nmovie-this\ndo-what-it-says\n");
+}
 ///////////////////////////////////////////////////////////////////////////////
 function processCommand( commandToExecute, commandArguments)  {
 
@@ -53,8 +58,10 @@ function processCommand( commandToExecute, commandArguments)  {
         doWhatItSays(); 
     }
     break;
+    case '' :
     default : {
-        console.log (`Sorry, I don't recognize this command : ${commandToExecute}`);
+        console_log (`Sorry, I don't recognize this command : ${commandToExecute}`);
+        printUsage();
     }
 
   }
@@ -65,7 +72,7 @@ function processCommand( commandToExecute, commandArguments)  {
 function concertThis( searchTerm ) {
 
     //debugger 
-    //console.log (`concertThis: ${searchTerm}`);
+    //console_log (`concertThis: ${searchTerm}`);
 
     //Replace any whitespace in the searchTerm with '%20'
     newSearchTerm = searchTerm.replace( /\s/g, "%20" );
@@ -77,36 +84,41 @@ function concertThis( searchTerm ) {
     axios.get( queryUrl ).then ( 
         function(response) {
         
-        //     console.log (response.data);
-        //     console.log (typeof response.data); 
-           
+        //     console_log (response.data);
+        //     console_log (typeof response.data); 
+            
+          console_log('-----------------------------------------------------------');
+                
             if ( !(response.data.includes("Not found}")) && (response.data.length > 0) ) {
                 
+                
                 // Print the number of events found, if any.
-                console.log( `${response.data.length} events found for artist ${searchTerm}` );
+                console_log( `${response.data.length} events found for artist ${searchTerm}` );
 
                 //For each event found, print the info
                 response.data.forEach( function( eventObject ) {
-                   // console.log( moment(eventObject.datetime, "YYYY-MM-DDTHH:mm:ss").inspect()); 
+                   // console_log( moment(eventObject.datetime, "YYYY-MM-DDTHH:mm:ss").inspect()); 
 
-                    var formatDateTime = moment(eventObject.datetime, "YYYY-MM-DDTHH:mm:ss").format("dd, MMM DD YYYY");
-                  console.log(` -- ${eventObject.venue.name} (${eventObject.venue.city}, ${eventObject.venue.country}) on ${formatDateTime} `);
+                    var formatDateTime = moment(eventObject.datetime, "YYYY-MM-DDTHH:mm:ss").format("MM/DD/YYYY");
+                  console_log(` -- ${eventObject.venue.name} (${eventObject.venue.city}, ${eventObject.venue.country}) on ${formatDateTime} `);
                 });
             } else {
-                console.log(`Sorry.  No events found for artist ${searchTerm}`);
+                console_log(`Sorry.  No events found for artist ${searchTerm}`);
             }
+            console_log('-----------------------------------------------------------');
+
         }
     ).catch (function (error) {
-        console.log(`HTTP call was initiated, but an error occurred.  The error is ${error}`) ;  
+        console_log(`HTTP call was initiated, but an error occurred.  The error is ${error}`) ;  
         if(error.response) {
             // The request was made and the server responded with a status code
             // that calls out of the range of 2xx
-            console.log("---------------Data-----------------");
-            console.log(error.response.data); 
-            console.log("---------------Status---------------");
-            console.log(error.response.status);
-            console.log("---------------Status---------------");
-            console.log(error.response.headers);
+            console_log("---------------Data-----------------");
+            console_log(error.response.data); 
+            console_log("---------------Status---------------");
+            console_log(error.response.status);
+            console_log("---------------Status---------------");
+            console_log(error.response.headers);
         }
     });
 
@@ -115,7 +127,7 @@ function concertThis( searchTerm ) {
 ///////////////////////////////////////////////////
 function spotifyThis(searchTerm) {
    
-    //console.log (`spotifyThis: ${searchTerm}`);
+    //console_log (`spotifyThis: ${searchTerm}`);
 
     if ( !searchTerm ) {
         searchTerm = "The Sign Ace Of Base";
@@ -123,23 +135,23 @@ function spotifyThis(searchTerm) {
   
     spotify.search({ type: 'track', query: searchTerm, limit: 1 }, function(err, data) {
     if (err) {
-        return console.log('Error occurred: ' + err);
+        return console_log('Error occurred: ' + err);
     }
 
-   //console.log(JSON.stringify(data, null, 2));  
+   //console_log(JSON.stringify(data, null, 2));  
    
     
    if (data.tracks.items.length === 0) {
-       console.log ("Sorry, I could not find that song."); 
+       console_log ("Sorry, I could not find that song."); 
    }
    else {
-    console.log( `${data.tracks.items.length} track(s) found.`);
-    console.log('-----------------------------------------------------------');
-    console.log( `Artist Name: ${data.tracks.items[0].album.artists[0].name}`);
-    console.log( `Song Name  : ${data.tracks.items[0].name}`);
-    console.log( `Preview URL: ${data.tracks.items[0].preview_url}`);
-    console.log( `Album  Name: ${data.tracks.items[0].album.name}`);
-    console.log('-----------------------------------------------------------');
+    //console_log( `${data.tracks.items.length} track(s) found.`);
+    console_log('-----------------------------------------------------------');
+    console_log( `Artist Name: ${data.tracks.items[0].album.artists[0].name}`);
+    console_log( `Song Name  : ${data.tracks.items[0].name}`);
+    console_log( `Preview URL: ${data.tracks.items[0].preview_url}`);
+    console_log( `Album  Name: ${data.tracks.items[0].album.name}`);
+    console_log('-----------------------------------------------------------');
    }
 
     });
@@ -155,7 +167,7 @@ function movieThis(searchTerm) {
          searchTerm = "Mr. Nobody";
       }
 
-      //console.log (`movie-this: ${searchTerm}`);
+      //console_log (`movie-this: ${searchTerm}`);
 
       // Here we construct our URL
       var queryURL = "https://www.omdbapi.com/?t=" + searchTerm + "&apikey=trilogy";
@@ -163,42 +175,42 @@ function movieThis(searchTerm) {
       axios.get( queryURL ).then ( 
           
         function(response) { 
-            //console.log(response.data);
+            //console_log(response.data);
 
             if (response.data.Response !== "False") {
-                console.log('-----------------------------------------------------------');
-                console.log( `Movie Title: ${response.data.Title}`);
-                console.log( `Year       : ${response.data.Year}`);
-                console.log( `Rating     : ${response.data.Rated}`);
+                console_log('-----------------------------------------------------------');
+                console_log( `Movie Title: ${response.data.Title}`);
+                console_log( `Year       : ${response.data.Year}`);
+                console_log( `Rating     : ${response.data.Rated}`);
 
                 response.data.Ratings.forEach ( function (ratingObject, index) {
                 if (ratingObject.Source === "Rotten Tomatoes") {
-                    console.log( `Rotten Tomatoes Rating: ${ratingObject.Value}` );
+                    console_log( `Rotten Tomatoes Rating: ${ratingObject.Value}` );
                 }
                 });
 
-                console.log( `Plot       : ${response.data.Country}`);
-                console.log( `Language   : ${response.data.Language}`);
-                console.log( `Plot       : ${response.data.Plot}`);
-                console.log( `Actors     : ${response.data.Actors}`);
+                console_log( `Plot       : ${response.data.Country}`);
+                console_log( `Language   : ${response.data.Language}`);
+                console_log( `Plot       : ${response.data.Plot}`);
+                console_log( `Actors     : ${response.data.Actors}`);
 
-                console.log('-----------------------------------------------------------');
+                console_log('-----------------------------------------------------------');
             }
             else {
-                console.log(`${response.data.Error}`);
+                console_log(`${searchTerm} : ${response.data.Error}`);
             }
           }
       ).catch (function (error) {
-        console.log(`HTTP call was initiated, but an error occurred. \nThe error is ${error}`) ;  
+        console_log(`HTTP call was initiated, but an error occurred. \nThe error is ${error}`) ;  
         if(error.response) {
             // The request was made and the server responded with a status code
             // that calls out of the range of 2xx
-            console.log("---------------Data-----------------");
-            console.log(error.response.data); 
-            console.log("---------------Status---------------");
-            console.log(error.response.status);
-            console.log("---------------Status---------------");
-            console.log(error.response.headers);
+            console_log("---------------Data-----------------");
+            console_log(error.response.data); 
+            console_log("---------------Status---------------");
+            console_log(error.response.status);
+            console_log("---------------Status---------------");
+            console_log(error.response.headers);
         }
     });
 }
@@ -206,24 +218,24 @@ function movieThis(searchTerm) {
 ///////////////////////////////////////////////////
 function doWhatItSays(searchTerm) {
     
-    console.log (`doWhatItSays`);
+    //console_log (`doWhatItSays`);
 
     //Open the file with the commands to execute.
     fs.readFile("random.txt", "utf8", function(error, data) {
 
     // If the code experiences any errors it will log the error to the console.
     if (error) {
-        return console.log(error);
+        return console_log(error);
     }
     
     // We will then print the contents of data
-    console.log(data);
+    //console_log(data);
     
     // Then split it by line (to allow processing of multiple commands).
     var dataArr = data.split("\n");
     
     // We will then re-display the content as an array for later use.
-    console.log(dataArr);
+    //console_log(dataArr);
 
     dataArr.forEach( function (line) {
 
@@ -235,4 +247,23 @@ function doWhatItSays(searchTerm) {
       }
     });
   });
+}
+
+
+//////////////////////////////////////////////////////
+// Writes the passed string to log.txt and the console
+
+function console_log ( string ) {
+
+    //Use the synchronous call for appending the file 
+    // to prevent out of order lines .
+
+    try {
+        fs.appendFileSync('log.txt', string + "\n");
+      } catch (err) {
+        throw err;
+      }
+   
+    //Now write to the console using the standard console.log
+    console.log(string);
 }

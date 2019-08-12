@@ -1,0 +1,51 @@
+Sorry, I don't recognize this command : unrecognized-command
+-----------------------------------------------------------
+3 events found for artist Ed Sheran
+ -- Laugardalsvöllur (Reykjavik, Iceland) on 08/11/2019 
+ -- Ipswich Chantry Park (Ipswich, United Kingdom) on 08/25/2019 
+ -- Chantry Park (Ipswich, United Kingdom) on 08/26/2019 
+-----------------------------------------------------------
+-----------------------------------------------------------
+Artist Name: Ace of Base
+Song Name  : The Sign
+Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=af5e450c25b845da8e224e744ab09c96
+Album  Name: The Sign (US Album) [Remastered]
+-----------------------------------------------------------
+-----------------------------------------------------------
+Artist Name: Madonna
+Song Name  : Like a Virgin
+Preview URL: https://p.scdn.co/mp3-preview/693e9d74bf04462da738351385fdc225cc465edc?cid=af5e450c25b845da8e224e744ab09c96
+Album  Name: Like a Virgin (Reissue)
+-----------------------------------------------------------
+-----------------------------------------------------------
+Movie Title: Mr. Nobody
+Year       : 2009
+Rating     : R
+Rotten Tomatoes Rating: 67%
+Plot       : Belgium, Germany, Canada, France, USA, UK
+Language   : English, Mohawk
+Plot       : A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors     : Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+-----------------------------------------------------------
+-----------------------------------------------------------
+Movie Title: The Silence of the Lambs
+Year       : 1991
+Rating     : R
+Rotten Tomatoes Rating: 96%
+Plot       : USA
+Language   : English, Latin
+Plot       : A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.
+Actors     : Jodie Foster, Lawrence A. Bonney, Kasi Lemmons, Lawrence T. Wrentz
+-----------------------------------------------------------
+-----------------------------------------------------------
+Artist Name: The Beatles
+Song Name  : Hey Jude - Remastered 2015
+Preview URL: null
+Album  Name: 1 (Remastered)
+-----------------------------------------------------------
+-----------------------------------------------------------
+Artist Name: Backstreet Boys
+Song Name  : I Want It That Way
+Preview URL: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=af5e450c25b845da8e224e744ab09c96
+Album  Name: The Hits--Chapter One
+-----------------------------------------------------------
