@@ -5,7 +5,7 @@
 LIRI stands for "Language Interpretation and Recognition Interface".  It is a command line interpreter that takes in parameters and returns results from Spotify music service API, the Open Movie Database API and the "Bands In Town" service API.  The app provides a solution to the problem of searching for this information from a command line setup or in computer systems without a graphical user interface (browser). 
 
 ### How to run 
-LIRIS is very simple to use, just login to your system's command line interpreter (with the node.js environment already setup), and run any of the LIRI commands:
+LIRI is very simple to use, just login to your system's command line interpreter (with the node.js environment already setup), and run any of the LIRI commands:
 ```
 node concert-this <artist name>
 ```
@@ -87,6 +87,7 @@ A movie showing a sample session for LIRI can be accessed [here](https://engjose
 
 ### Technologies Used
 LIRI is built using javascript and runs in the node.js engine.  It has various dependencies:
+* npm package 'env' for handling the API keys as environment variables. 
 * npm package 'fs' for file system operations.  Needed for reading and writing the random.txt and log.txt files.
 * npm pakcage 'axiom' for http GET calls to the API's.
 * npm package 'node-spotify-api' for accessing the Spotify service's APIs.
