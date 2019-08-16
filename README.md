@@ -1,19 +1,19 @@
 # LIRI Bot
 
  * [Overview](#overview)
- * [How To Run](#how-to)
- * [File Structure](#files)
- * [Demo movie](#demo)
- * [Technologies Used](#techs-used)
- * [How To Install](#install-howto)
- * [Support](#support)
+ * [How To Run](#"How%20To%20Run")
+ * [File Structure](#File%20Structure)
+ * [Demo movie](#Demo)
+ * [Technologies Used](#Technologies%20Used)
+ * [How To Install](#How%20To%Install)
+ * [Support](#Support)
  
  
-### <a id="overview_anchor" class="anchor" href="#overview">Overview</a>
+### Overview
 
 LIRI stands for "Language Interpretation and Recognition Interface".  It is a command line interpreter that takes in parameters and returns results from Spotify music service API, the Open Movie Database API and the "Bands In Town" service API.  The app provides a solution to the problem of searching for this information from a command line setup or in computer systems without a graphical user interface (browser). 
 
-### <a id="how_to_run" class="anchor" href="#how-to">How to run</a>
+### How To Run
 
 LIRI is very simple to use, just login to your system's command line interpreter (with the node.js environment already setup), and run any of the LIRI commands:
 ```
@@ -69,7 +69,7 @@ Album  Name: 1 (Remastered)
 -----------------------------------------------------------
 ```
 
-### <a id="file_struc_anchor" class="anchor" href="#files">File Structure</a>
+### File Structure
 
 ```
 +-+.gitignore -- Files to be ignored by git (node packages and such).
@@ -91,7 +91,7 @@ Album  Name: 1 (Remastered)
   + random.txt  -- Command script with instructions for batch execution by LIRI.
 ```
 
-### <a id="demo_anchor" class="anchor" href="#demo">Demo</a>
+### Demo
 
 A movie showing a sample session for LIRI can be accessed [here](https://engjoserobles-gmail.tinytake.com/tt/MzcwMDg0M18xMTI0ODUzOA)
 
@@ -99,7 +99,7 @@ A movie showing a sample session for LIRI can be accessed [here](https://engjose
 
 Following the movie link will take you to another website. 
 
-### <a id="techs_used_anchor" class="anchor" href="#techs-used">Technologies Used</a>
+### Technologies Used
 
 LIRI is built using javascript and runs in the node.js engine.  It has various dependencies:
 * npm package 'env' for handling the API keys as environment variables. 
@@ -108,7 +108,7 @@ LIRI is built using javascript and runs in the node.js engine.  It has various d
 * npm package 'node-spotify-api' for accessing the Spotify service's APIs.
 * npm package 'moment.js' for handling and formatting Date() objects. 
 
-### <a id="install_howto_anchor" class="anchor" href="#install-howto">How To Install</a>
+### How To Install
 
 To install LIRI on your local machine:
 1. Clone the GitHub Repository for [LIRI](https://github.com/j0serobles/liri-node-app) on your local machine.
@@ -140,7 +140,7 @@ SPOTIFY_SECRET=<spotify secret key>
   node liri.js movie-this "Casablanca"
   ```
   
-  ### <a id="support_anchor" class="anchor" href="#support">Support</a>
+  ### Support
   If you have any issues installing or using the app, send me a notification at [engjoserobles@gmail.com](mailto:engjoserobles@gmail.com)
   
 
