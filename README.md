@@ -1,7 +1,7 @@
 # LIRI Bot
  * [Overview](#Overview)
 
- * [How To Run]("#How%20To%20Run")
+ * [How To Run](#how%20to%20run)
  
  * [File Structure](#File%20Structure)
  
