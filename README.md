@@ -1,12 +1,12 @@
 # LIRI Bot
 
- * [Overview](#overview)
- * [How To Run](#"How%20To%20Run")
- * [File Structure](#File%20Structure)
- * [Demo movie](#Demo)
- * [Technologies Used](#Technologies%20Used)
- * [How To Install](#How%20To%Install)
- * [Support](#Support)
+ * [Overview](###Overview)
+ * [How To Run](###How%20To%20Run)
+ * [File Structure](###File%20Structure)
+ * [Demo movie](###Demo)
+ * [Technologies Used](###Technologies%20Used)
+ * [How To Install](###How%20To%Install)
+ * [Support](###Support)
  
  
 ### Overview
