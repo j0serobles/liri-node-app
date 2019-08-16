@@ -1,7 +1,7 @@
 # LIRI Bot
- * [Overview](#Overview)
+ * [Overview](#overview)
 
- * [How To Run](#how%20to%20run)
+ * [How To Run](#HowToRun)
  
  * [File Structure](#File%20Structure)
  
@@ -11,11 +11,11 @@
  * [Support](#Support)
  
  
-### Overview
+### Overview <a name="overview"></a>
 
 LIRI stands for "Language Interpretation and Recognition Interface".  It is a command line interpreter that takes in parameters and returns results from Spotify music service API, the Open Movie Database API and the "Bands In Town" service API.  The app provides a solution to the problem of searching for this information from a command line setup or in computer systems without a graphical user interface (browser). 
 
-### How To Run
+### How To Run <a name="HowToRun"></a>
 
 LIRI is very simple to use, just login to your system's command line interpreter (with the node.js environment already setup), and run any of the LIRI commands:
 ```
