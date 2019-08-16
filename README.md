@@ -1,14 +1,13 @@
 # LIRI Bot
 
-<ul>
- <li><a href="#overview">Overview            </a>  </li>
- <li><a href="#how-to">How to run            </a>  </li>
- <li><a href="#files">File Structure         </a>  </li>
- <li><a href="#demo">Demo                    </a>  </li>
- <li><a href="#techs-used">Technologies Used </a>  </li>
- <li><a href="#install-howto">How to Install </a>  </li>
- <li><a href="#support">Support              </a>  </li>
-</ul>
+ * [Overview](#overview)
+ * [How To Run](#how-to)
+ * [File Structure](#files)
+ * [Demo movie](#demo)
+ * [Technologies Used](#techs-used)
+ * [How To Install](#install-howto)
+ * [Support](#support)
+ 
  
 ### <a id="overview_anchor" class="anchor" href="#overview">Overview</a>
 
