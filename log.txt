@@ -1,9 +1,9 @@
-Sorry, I don't recognize this command : unrecognized-command
+*** Error: concert-this requires an artist name.
+
 -----------------------------------------------------------
-3 events found for artist Ed Sheran
- -- Laugardalsvöllur (Reykjavik, Iceland) on 08/11/2019 
- -- Ipswich Chantry Park (Ipswich, United Kingdom) on 08/25/2019 
- -- Chantry Park (Ipswich, United Kingdom) on 08/26/2019 
+2 events found for artist Ed Sheran
+ -- Chantry Park (Suffolk Hill, United Kingdom) on 08/25/2019 
+ -- Chantry Park (Suffolk Hill, United Kingdom) on 08/26/2019 
 -----------------------------------------------------------
 -----------------------------------------------------------
 Artist Name: Ace of Base
@@ -12,10 +12,10 @@ Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae99188
 Album  Name: The Sign (US Album) [Remastered]
 -----------------------------------------------------------
 -----------------------------------------------------------
-Artist Name: Madonna
-Song Name  : Like a Virgin
-Preview URL: https://p.scdn.co/mp3-preview/693e9d74bf04462da738351385fdc225cc465edc?cid=af5e450c25b845da8e224e744ab09c96
-Album  Name: Like a Virgin (Reissue)
+Artist Name: Dire Straits
+Song Name  : Money for Nothing
+Preview URL: https://p.scdn.co/mp3-preview/de29252ad3422a46bf0b4f2ee128ef09ec543c5e?cid=af5e450c25b845da8e224e744ab09c96
+Album  Name: Brothers in Arms
 -----------------------------------------------------------
 -----------------------------------------------------------
 Movie Title: Mr. Nobody
@@ -28,24 +28,24 @@ Plot       : A boy stands on a station platform as a train is about to leave. Sh
 Actors     : Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
 -----------------------------------------------------------
 -----------------------------------------------------------
-Movie Title: The Silence of the Lambs
-Year       : 1991
-Rating     : R
-Rotten Tomatoes Rating: 96%
-Plot       : USA
-Language   : English, Latin
-Plot       : A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.
-Actors     : Jodie Foster, Lawrence A. Bonney, Kasi Lemmons, Lawrence T. Wrentz
------------------------------------------------------------
------------------------------------------------------------
-Artist Name: The Beatles
-Song Name  : Hey Jude - Remastered 2015
-Preview URL: null
-Album  Name: 1 (Remastered)
+Movie Title: Meatballs
+Year       : 1979
+Rating     : PG
+Rotten Tomatoes Rating: 76%
+Plot       : Canada
+Language   : English
+Plot       : Wacky hijinks of counselors and campers at a less-than-average summer camp.
+Actors     : Bill Murray, Harvey Atkin, Kate Lynch, Russ Banham
 -----------------------------------------------------------
 -----------------------------------------------------------
 Artist Name: Backstreet Boys
 Song Name  : I Want It That Way
 Preview URL: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=af5e450c25b845da8e224e744ab09c96
 Album  Name: The Hits--Chapter One
+-----------------------------------------------------------
+-----------------------------------------------------------
+Artist Name: The Beatles
+Song Name  : Hey Jude - Remastered 2015
+Preview URL: null
+Album  Name: 1 (Remastered)
 -----------------------------------------------------------

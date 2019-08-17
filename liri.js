@@ -35,7 +35,7 @@ processCommand (commandToExecute, commandArguments);
 //////////////////////////////////////////////////////
 function printUsage () {
     console.log ("USAGE : \nnode liri.js <command> [<argument>]\nWhere <command> is one of:\n" + 
-                  "concert-this\nspotify-this-song\nmovie-this\ndo-what-it-says\n");
+                  "  concert-this\n  spotify-this-song\n  movie-this\n  do-what-it-says\n");
 }
 ///////////////////////////////////////////////////////////////////////////////
 function processCommand( commandToExecute, commandArguments)  {
@@ -74,6 +74,11 @@ function concertThis( searchTerm ) {
     //debugger 
     //console_log (`concertThis: ${searchTerm}`);
 
+    if ( !searchTerm ) {
+        console_log("*** Error: concert-this requires an artist name.\n"); 
+        printUsage();
+        return;
+    }
     //Replace any whitespace in the searchTerm with '%20'
     newSearchTerm = searchTerm.replace( /\s/g, "%20" );
     
