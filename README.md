@@ -98,11 +98,11 @@ Album  Name: 1 (Remastered)
 
 ### Demo <a name="Demo"></a>
 
-A movie showing a sample session for LIRI can be accessed [here](<img src="https://ttprivatenew.s3.amazonaws.com/pulse/engjoserobles-gmail/attachments/11274190/TinyTake16-08-2019-10-28-40.mp4" title="LIRI Video Demo"/>)
+A movie showing a sample session for LIRI can be accessed [here](https://engjoserobles-gmail.tinytake.com/tt/MzcwODI5MF8xMTI3NDE5MA)
 
 **NOTE**: For better viewing, set the movie player to "Full Size". 
 
-Following the movie link will take you to another website. 
+Following the movie link will take you out of the current page.
 
 ### Technologies Used <a name="techsUsed"></a>
 
