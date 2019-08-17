@@ -98,7 +98,7 @@ Album  Name: 1 (Remastered)
 
 ### Demo <a name="Demo"></a>
 
-A movie showing a sample session for LIRI can be accessed [here](./hw10_liri_js.mp4)
+A movie showing a sample session for LIRI can be accessed <a href="https://engjoserobles-gmail.tinytake.com/tt/MzcwODc1MF8xMTI3NjkwMg" target="_blank">here</a>
 
 **NOTE**: For better viewing, set the movie player to "Full Size". 
 
