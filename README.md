@@ -22,17 +22,17 @@ LIRI stands for "Language Interpretation and Recognition Interface".  It is a co
 
 LIRI is very simple to use, just login to your system's command line interpreter (with the node.js environment already setup), and run any of the LIRI commands:
 ```
-node concert-this <artist name>
+node liri.js concert-this <artist name>
 ```
 The command above will search the Bands in Town Artist Events API for an artist and render the Name of the venue, the Venue location and the date of the Event for future events (concerts) by that artist.  You must pass an artist name.
 
 ```
-node spotify-this-song [<song name>]
+node liri.js spotify-this-song [<song name>]
 ```
 Running the command above will show information about the song: the artist(s), the song's name, a preview link of the song from Spotify and the album that the song is from.  The song name is optional.  If no parameter for a song is passed, LIRI will respond with information about song "The Sign" by Ace of Base.
 
 ```
-node movie-this [<movie name>]
+node liri.js movie-this [<movie name>]
 ```
 The command above will output the following information :
 
@@ -48,7 +48,7 @@ The command above will output the following information :
   If no movie parameter is passed, LIRI will print out the details of movie [Mr. Nobody](http://www.imdb.com/title/tt0485947/)
 
 ```
-node do-what-it-says 
+node liri.js do-what-it-says 
 ```
 This will make LIRI run the commands already saved in file 'random.txt' in the current working directory.  For example, if the contents of the file are :
 ```
